@@ -1,8 +1,35 @@
-.napisy_glowna{
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
+body{
+  background-color: #303030;
+  color: #ffffff;
+
+}
+#cont{
+  width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-size: 70px;
+  padding: 100px 250px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.tile1{
+  background-color: #f44336;
+}
+.tile1:hover{
+  background-color: #8b0000;
+}
+.tile2{
+  background-color: #f44336;
+}
+.tile2:hover{
+  background-color: #8b0000;
+}
+a.tilelink
+{
+  color:#ffffff;
+  text-decoration: none;
+  display: block;
+}
