@@ -27,6 +27,12 @@ body{
 .tile2:hover{
   background-color: #8b0000;
 }
+.service{
+  background-color: blue;
+}
+.service:hover{
+  background-color: lightblue;
+}
 a.tilelink
 {
   color:#ffffff;
