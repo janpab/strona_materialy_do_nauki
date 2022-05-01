@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="naglowki">Konfiguracja Apache2</h1>
+    <h2 id="naglowki">Strona dla uzytkowników</h2>
+
+    <h3>Tworzymy folder public_html dla użytkownika(w moim przypadku będzie to użytkownik jan)</h3>
+    <code id="kod">sudo mkdir /home/jan/public_html</code>
+    <p id="tekst">Daje uparwnienia użytkownikowi do folderu</p>
+    <code id="kod">sudo chown jan:jan /home/jan/public_html</code>
+    <p id="tekst">Tworzymy przykładowy plik w folderze public_html</p>
+    <code id="kod">touch /home/jan/public_html/index.html</code>
+    <p id="tekst">Edytujemy plik strony według własnych preferencji</p>
+    <code id="kod">nano /home/jan/public_html/index.html</code>
+    <p id="tekst">Teraz po wpisaniu adresu IP naszego serwera w przeglądarce po "/" wpisujemy tyldę"~" i nazwę naszego użytkownika</p>
+    <code id="kod">192.168.1.2/~jan/</code>
+    <p id="tekst">Powinno nam się wyświtlic to co wpisalismy w plik index.html</p>
+
+    <h2>DNS</h2>
+    <p id="tekst">Kopiujemy plik konfiguracyjny ze strony domyślnej apache</p>
+    <code id="kod">sudo cp /etc/apache2/sites-available/000=default.conf /etc/apache2/sites-available/stronka.com.conf  </code>
+<pre><code id="kod">
+    <VirtualHost *:80>
+        # The ServerName directive sets the request scheme, hostname and port that
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        ServerName stronka.pl
+        ServerAlias www.stronka.pl
+
+        #ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/stronka.com
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        # For most configuration files from conf-available/, which are
+        # enabled or disabled at a global level, it is possible to
+        # include a line for only one particular virtual host. For example the
+        # following line enables the CGI configuration for this host only
+        # after it has been globally disabled with "a2disconf".
+        #Include conf-available/serve-cgi-bin.conf
+</VirtualHost>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+</code></pre>
+<p id="tekst">Zmieniamy ServerName na naszą stronę stronka.pl i zmieniamy ServerAlias na www.stronka.pl</p>
+
+
+
+<p id="tekst">Odpalamy stronkę</p>
+
+<code id="kod">sudo a2ensite stronka.pl.conf</code>
+</br>
+<p id="tekst">Restart</p>
+
+<code id="kod">systemctl reload apache2</code>
+
+</br>
+</br>
+</br>
+    <h2>HTTPS</h2>
+
+</br>
+</br>
+</br>
+    <h2>PHP</h2>
+</br>
+</br>
+</br>
+    <h2>MySQL</h2>
+
+
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</body>
+</html>

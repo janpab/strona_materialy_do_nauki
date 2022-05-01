@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="naglowki">Konfiguracja ProFTPd</h1>
+    <h2 id="naglowki">Najważniejsze Ustawienia</h2>
+</br>
+</br>
+    <h3>Zmiany nazwy serwera</h3>
+    <code id="kod">ServerName "Twój Server"</code>
+</br>
+</br>
+    <h3>Czas po którym Połączenie FTP się wyłącza</h3>
+    <code id="kod">TimeoutNoTransfer 600</code>
+    <p id="tekst">Maksymalny czas połączenia bez wysyłania lub pobierania plików.</p>
+</br>
+
+    <code id="kod">TimeoutStalled 600</code>
+    <p id="tekst">Ogólna długość połączenia bez robienia czegokolwiek.</p>
+</br>
+    <code id="kod">TimeoutIdle 1200</code>
+    <p id="tekst">Konfiguruje maksymalną liczbę sekund, przez które proftpd pozwoli klientom pozostać połączonymi bez otrzymania jakichkolwiek danych. Jeśli dane zostaną odebrane, licznik czasu bezczynności jest resetowany. Ustawienie TimeoutIdle na 0 całkowicie wyłącza TimeoutIdle</p>
+</br>
+    <h3>Wiadomość powitalna podczas logowania</h3>
+    <code id="kod">DisplayLogin welcome.msg</code>
+    <p id="tekst">Ścieżka pliku którego treść zostanie wyświetlona podczas pierwszego logowania. Nazwa pliku może być względna lub bezwzględna. W przypadku nazwy względnej, plik jest szukany w początkowym katalogu, do którego użytkownik trafia zaraz po zalogowaniu (katalog domowy dla logowań użytkowników unixowych, katalog anonymous-root dla logowań anonimowych). </p>
+</br>
+    <h3>Wiadomość która pojawi się zawsze gdy zmienimy katalog</h3>
+    <code id="kod">DisplayChdir .message true</code>
+    <p id="tekst">Tekstowa nazwa która będzie wyświetlana za każdym razem gdy zmieni się katalog. </p>
+</br>
+    <h3>Jak szczegółowe ma być polecenie ls</h3><a href="http://www.proftpd.org/docs/directives/linked/config_ref_ListOptions.html" style="text-decoration: none">Dokumentacja</a>   
+    <code id="kod">ListOptions  "-l"</code>
+    <pre id="tekst">
+    -1 Wyświetla leden plik na linię
+
+    -A List all files except "." and ".."
+      
+    -a Wyświetla wszystkie ukryte pliki
+      
+    -C Wyświetla za pomocą kolumn
+      
+    -d List directory entries instead of directory contents
+      
+    -F Dodaje wskaźnik typu pliku (jeden z "*", "/", "=", "@" lub "|") do nazw plików
+      
+    -h Wyświetla rozmiary plików w czytelnym formacie(np. 1K, 234M, 2G)
+      
+    -L List files pointed to by symlinks
+      
+    -l Użyj długiego formatu listowania
+      
+    -n Wyświetlanie numerycznych identyfikatorów UID/GID zamiast nazw user/group
+      
+    -R Lista podkatalogów rekursywnie
+      
+    -r Sortuj nazwy plików w odwrotnej kolejności
+      
+    -S Sortuj po nazwie pliku
+      
+    -t Sortuj po czasie ostatniej modyfikacji
+    </pre>
+    <h2 id="naglowki">FTP Anonimowe</h2>
+
+    <h2 id="naglowki">Bezpieczeństwo proftpd</h2>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+</body>
+</html>
