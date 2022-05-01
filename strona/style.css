@@ -3,6 +3,10 @@ body{
   color: #ffffff;
 
 }
+#kod{
+  font-size:20px;
+  background-color: turquoise;
+}
 #cont{
   width:1000px;
   margin-left: auto;
