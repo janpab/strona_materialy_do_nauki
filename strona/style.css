@@ -42,4 +42,8 @@ a.tilelink
   color:#ffffff;
   text-decoration: none;
   display: block;
-}/*as*/
+}
+h2.inf1{
+  display:inline;
+  float:left;
+}
