@@ -47,3 +47,27 @@ h2.inf1{
   display:inline;
   float:left;
 }
+
+
+
+.praktyka{
+  float: right;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+}
+h2.praktyka{
+  display: inline-block;
+}
+h3.praktyka{
+  display: inline-block;
+}
+a.praktyka {
+  color: hotpink;
+  text-decoration: none;
+}
+
+
+.teoria{
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+}
